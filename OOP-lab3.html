@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Factor function
+        function person (fname) {
+            return{
+                fname,
+
+                sleep(hours){
+                    if(hours == 7){
+                        this.sMood = 'Happy';
+                        
+                    }else if(hours < 7){
+                        this.sMood ='Tired';
+                        //alert(this.sMood);
+                    }else if(hours > 7){
+                        this.sMood = 'Lazy';
+                        //alert(this.sMood);
+                    }
+                    return alert(this.sMood);
+                },
+                eat(meals){
+                    if(meals == 3){
+                        this.hRate = "100 health rate";
+                        //console.log(this.hRate);
+                    }else if(meals ==2 ){
+                        this.hRate = "75 health rate";
+                        //console.log(this.hRate);
+                    }else if(meals == 1){
+                    this.hRate = "50 health rate";
+                    }
+                    return alert(this.hRate);
+                },
+                buy(items){
+                    if(items == 1){
+                    this.money = "decreases money by 10 LE";
+                }
+                return alert(this.money);
+                },
+            
+            };
+        }
+
+        const person2 = new person("kareem");
+        alert(person2.fname);
+        person2.sleep(5);
+        person2.eat(1);
+        person2.buy(1);
+    
+
+    </script>
+</body>
+</html>

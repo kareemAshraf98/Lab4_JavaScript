@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 4</title>
+</head>
+<body>
+    <script>
+        // Class Object
+        class person{
+            constructor(fname,money,sMood,hRate){
+                this.fname = fname;
+                this.money = money;
+                this.sMood = sMood;
+                this.hRate = hRate;
+            }
+            sleep(hours){
+                if(hours == 7){
+                    this.sMood = 'Happy';
+                    //alert(this.sMood);
+                }else if(hours < 7){
+                    this.sMood ='Tired';
+                    //alert(this.sMood);
+                }else if(hours > 7){
+                    this.sMood = 'Lazy';
+                    //alert(this.sMood);
+                }
+                return alert(this.sMood);
+            }
+            eat(meals){
+                if(meals == 3){
+                    this.hRate = "100 health rate";
+                    //console.log(this.hRate);
+                }else if(meals ==2 ){
+                    this.hRate = "75 health rate";
+                    //console.log(this.hRate);
+                }else if(meals == 1){
+                    this.hRate = "50 health rate";
+                }
+                return alert(this.hRate);
+            }
+            buy(items){
+                if(items == 1){
+                    this.money = "decreases money by 10 LE";
+                }
+                return alert(this.money);
+            }
+        }
+
+        const person1 = new person("Kareem");
+        alert(person1.fname);
+        person1.sleep(10);
+        person1.eat(3);
+        person1.buy(1);
+        
+    </script>
+</body>
+</html>
